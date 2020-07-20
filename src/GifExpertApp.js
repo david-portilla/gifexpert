@@ -13,7 +13,7 @@ function GifExpertApp ({ hi = 'Heyy!' }) {
   return (
     <>
       <h2> { hi } GifExpert App</h2>
-      <AddCategory />
+      <AddCategory setCategories={ setCategories } />
       <hr />
       {/* <button onClick={ addCharacter } >add new character</button> */ }
       <ol>
