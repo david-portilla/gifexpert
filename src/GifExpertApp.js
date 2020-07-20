@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { AddCategory } from "./components/AddCategory";
-import { GifGrid } from './components/GifGrid';
+import { GifList } from './components/GifList';
 
 function GifExpertApp ({ hi = 'Heyy!' }) {
   const [ categories, setCategories ] = useState([ 'Vegeta' ])
@@ -14,7 +14,7 @@ function GifExpertApp ({ hi = 'Heyy!' }) {
       <ol>
         {
           categories.map(category =>
-            <GifGrid key={ category } category={ category } />
+            <GifList key={ category } category={ category } />
           )
         }
       </ol>
