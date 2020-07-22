@@ -1,7 +1,7 @@
 # gifexpert
 Gif Expert App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React application made it with hooks to search and pull gif images from Giphy via rest API.
 
 ## Available Scripts
 
