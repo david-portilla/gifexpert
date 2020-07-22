@@ -1,5 +1,4 @@
-# gifexpert
-Gif Expert App
+# Gif Expert App
 
 React application made it with hooks to search and pull gif images from Giphy via rest API.
 
