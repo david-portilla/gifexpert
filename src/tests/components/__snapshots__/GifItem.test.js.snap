@@ -4,9 +4,14 @@ exports[`Testing <GifItem /> should show <GifItem /> 1`] = `
 <div
   className="card animate__animated animate__fadeIn"
 >
-  <img />
+  <img
+    alt="gif title"
+    key="dadad"
+    src="www.testingmywebsite.com"
+  />
   <p>
      
+    gif title
   </p>
 </div>
 `;
