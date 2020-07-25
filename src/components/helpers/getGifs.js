@@ -14,3 +14,5 @@ export const getImages = async (category) => {
   // setImages(gifs)
   return gifs
 }
+
+// export default getImages
