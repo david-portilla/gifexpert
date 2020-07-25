@@ -1,6 +1,7 @@
 import React from 'react'
 import GifItem from './GifItem'
 import { useFetchGifs } from './hooks/useFecthGifs'
+import PropTypes from 'prop-types'
 
 export const GifList = ({ category }) => {
 
@@ -20,4 +21,8 @@ export const GifList = ({ category }) => {
       }
     </div>
   )
+}
+
+GifList.propTypes = {
+  category: PropTypes.string.isRequired
 }

@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test <GifList /> should recive the categories 1`] = `
+<div
+  className="card-list"
+>
+  <p
+    className="animate__animated animate__flash"
+  >
+    cargando
+  </p>
+  <h3
+    className="card-list-title"
+    key="mycategory"
+  >
+    mycategory
+  </h3>
+</div>
+`;
+
+exports[`Test <GifList /> should render useFetchGifs 1`] = `
+<div
+  className="card-list"
+>
+  <h3
+    className="card-list-title"
+    key="mycategory"
+  >
+    mycategory
+  </h3>
+  <GifItem
+    id="ABC"
+    key="ABC"
+    title="Title"
+    url="justanurl.com"
+  />
+</div>
+`;
