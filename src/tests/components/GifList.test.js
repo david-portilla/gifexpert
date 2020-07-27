@@ -31,7 +31,10 @@ describe('Test <GifList />', () => {
     })
 
     const wrapper = shallow(<GifList category={ category } />)
-    expect(wrapper).toMatchSnapshot()
+
+    // expect(wrapper).toMatchSnapshot()
+    expect(wrapper.find('p').exists()).toBe(false)
+    expect(wrapper.find('GifItem').length).toBe(gifs.length)
   })
 
 
