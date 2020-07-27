@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import { AddCategory } from "./components/AddCategory";
 import { GifList } from './components/GifList';
 
-function GifExpertApp ({ hi = 'Heyy!' }) {
-  const [ categories, setCategories ] = useState([ 'Vegeta' ])
+export const GifExpertApp = ({ defaultCategories = [] }) => {
+
+  const [ categories, setCategories ] = useState(defaultCategories)
 
   return (
     <>
@@ -20,10 +20,6 @@ function GifExpertApp ({ hi = 'Heyy!' }) {
       </ol>
     </>
   )
-}
-
-GifExpertApp.propTypes = {
-  hi: PropTypes.string
 }
 
 export default GifExpertApp
