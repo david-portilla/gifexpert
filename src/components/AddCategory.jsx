@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const AddCategory = () => {
+export const AddCategory = ({ onNewCategory }) => {
   const [inputValue, setInputValue] = useState("");
 
   const handleChange = (e) => {
@@ -9,17 +9,22 @@ export const AddCategory = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Fecth data with value: " + inputValue);
+    if (inputValue.trim().length <= 2) return;
+    setInputValue("");
+    onNewCategory(inputValue);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Search gif ..."
-        value={inputValue}
-        onChange={handleChange}
-      />
-    </form>
+    <>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Search gif ..."
+          value={inputValue}
+          onChange={handleChange}
+        />
+      </form>
+      <button onClick={handleSubmit}>Search</button>
+    </>
   );
 };
