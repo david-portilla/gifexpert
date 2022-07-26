@@ -6,7 +6,7 @@ export const GifApp = () => {
   const [searchs, setSearchs] = useState([""]);
   const onSearchTerm = (searchTerm) => {
     if (searchs.includes(searchTerm)) return;
-    setSearchs(searchTerm);
+    setSearchs([searchTerm]);
   };
 
   return (
