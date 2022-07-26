@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const AddCategory = ({ onSearchTerm }) => {
+export const SearchForm = ({ onSearchTerm }) => {
   const [inputValue, setInputValue] = useState("");
 
   const handleChange = (e) => {
@@ -9,16 +9,14 @@ export const AddCategory = ({ onSearchTerm }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (inputValue.trim().length <= 2) {
-      console.log("please writte a term");
-      return;
-    }
+    if (inputValue.trim().length <= 3) return;
     setInputValue("");
     onSearchTerm(inputValue.trim());
   };
 
   return (
     <>
+      {inputValue.trim().length <= 3 && <p>Please write a search term.</p>}
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -27,7 +25,9 @@ export const AddCategory = ({ onSearchTerm }) => {
           onChange={handleChange}
         />
       </form>
-      <button onClick={handleSubmit}>Search</button>
+      <button onClick={handleSubmit} disabled={inputValue.trim().length <= 3}>
+        Search
+      </button>
     </>
   );
 };
