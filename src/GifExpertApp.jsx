@@ -14,7 +14,7 @@ export const GifExpertApp = () => {
       <h1>Get images from GIPHY</h1>
       <SearchForm onSearchTerm={onSearchTerm} />
       {searchs.map((search) => (
-        <GifGrid key={search} category={search} />
+        <GifGrid key={search} term={search} />
       ))}
     </>
   );
