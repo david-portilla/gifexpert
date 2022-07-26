@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const AddCategory = ({ onNewCategory }) => {
+export const AddCategory = ({ onSearchTerm }) => {
   const [inputValue, setInputValue] = useState("");
 
   const handleChange = (e) => {
@@ -9,9 +9,12 @@ export const AddCategory = ({ onNewCategory }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (inputValue.trim().length <= 2) return;
+    if (inputValue.trim().length <= 2) {
+      console.log("please writte a term");
+      return;
+    }
     setInputValue("");
-    onNewCategory(inputValue.trim());
+    onSearchTerm(inputValue.trim());
   };
 
   return (

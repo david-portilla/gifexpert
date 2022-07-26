@@ -1,22 +1,21 @@
 import React, { useState } from "react";
 import { AddCategory } from "./components/AddCategory";
+import { GifGrid } from "./components/GifGrid";
 
 export const GifExpertApp = () => {
-  const [categories, setCategories] = useState(["Goku", "Vegeta"]);
-  const onAddCategory = (newCategory) => {
-    if (categories.includes(newCategory)) return;
-    setCategories([newCategory, ...categories]);
+  const [results, setResults] = useState([""]);
+  const onSearchTerm = async (searchTerm) => {
+    if (results.includes(searchTerm)) return;
+    setResults([searchTerm]);
   };
 
   return (
     <>
       <h1>Gif Expert App</h1>
-      <AddCategory onNewCategory={onAddCategory} />
-      <ol>
-        {categories.map((category, idx) => {
-          return <li key={idx}>{category}</li>;
-        })}
-      </ol>
+      <AddCategory onSearchTerm={onSearchTerm} />
+      {results.map((category) => (
+        <GifGrid key={category} category={category} />
+      ))}
     </>
   );
 };
