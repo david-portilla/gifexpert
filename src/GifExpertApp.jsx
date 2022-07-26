@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { SearchForm } from "./components/SearchForm";
 import { GifGrid } from "./components/GifGrid";
 
-export const GifExpertApp = () => {
-  const [searchs, setSearchs] = useState([]);
+export const GifApp = () => {
+  const [searchs, setSearchs] = useState([""]);
   const onSearchTerm = (searchTerm) => {
     if (searchs.includes(searchTerm)) return;
-    setSearchs([searchTerm]);
+    setSearchs(searchTerm);
   };
 
   return (
